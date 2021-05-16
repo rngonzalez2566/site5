@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/site.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div id="contenedor">
+        <header>
+                <div id="log"></div>
+        </header>
+            
+        <nav id="navegacion">
+                <ul id="menu_principal">
+                    <li> <a href="/">Home</a> </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Category")">Categorias</a>
+                    </li>
+            </ul>
+        </nav>
+
+        <section id="contenido">
+            <article id="principal">
+                @RenderBody()
+            </article>
+            <aside id="sidebar">
+                <h2> Opciones secundarias</h2>
+            </aside>          
+        </section>
+        
+        <footer id="pie">
+            <p> Pie de pagina - Parcial 1 LPPA - 2021 </p>
+        </footer>
+
+
+    </div>
+</body>
+</html>
